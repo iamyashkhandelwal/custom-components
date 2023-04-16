@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Accordion from './components/Accordion';
 import Toast from './components/Toast';
+import Pagination from './components/Pagination';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -112,6 +113,8 @@ function App() {
           details={"dnsdamdsjdnsjdnsknskndksndskdnskdo"}
         />
       </div>
+
+      <Pagination count={20} />
 
     
       {open && (

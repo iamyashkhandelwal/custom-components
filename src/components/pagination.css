@@ -1,0 +1,30 @@
+button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  margin: 0px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dots {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin: 0px 5px;
+}
+
+button:hover:not(.selectedBtn, :disabled) {
+  background-color: lightgrey;
+}
+button:disabled {
+  cursor: auto;
+}
+
+.selectedBtn {
+  font-weight: bold;
+  border: 1px solid lightseagreen;
+  color: lightseagreen;
+  background-color: lightcyan;
+}
