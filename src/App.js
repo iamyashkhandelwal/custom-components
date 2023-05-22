@@ -4,6 +4,7 @@ import Accordion from './components/Accordion';
 import Toast from './components/Toast';
 import Pagination from './components/Pagination';
 import { LinearPageScrollBar } from './components/linear-page-scroll-bar/LinearPageScrollBar';
+import { CircularPageScrollIndicator } from './components/circular-page-scroll-indicator/CircularPageScrollIndicator';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
     <LinearPageScrollBar />
+    <CircularPageScrollIndicator />
     <div className="App" style={{ minHeight: '150vh' }}>
       <h1>Custom Components</h1>
       <h2>Start editing to see some magic happen!</h2>
