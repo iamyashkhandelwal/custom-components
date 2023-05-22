@@ -3,6 +3,7 @@ import './App.css';
 import Accordion from './components/Accordion';
 import Toast from './components/Toast';
 import Pagination from './components/Pagination';
+import { LinearPageScrollBar } from './components/linear-page-scroll-bar/LinearPageScrollBar';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,9 @@ function App() {
   };
   console.log("p=open -- ", open);
   return (
-    <div className="App">
+    <>
+    <LinearPageScrollBar />
+    <div className="App" style={{ minHeight: '150vh' }}>
       <h1>Custom Components</h1>
       <h2>Start editing to see some magic happen!</h2>
       {/* <div className='toastButtons'>
@@ -131,6 +134,7 @@ function App() {
         />
       )}
     </div>
+    </>
   );
 }
 
