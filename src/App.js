@@ -5,6 +5,7 @@ import Toast from './components/Toast';
 import Pagination from './components/Pagination';
 import { LinearPageScrollBar } from './components/linear-page-scroll-bar/LinearPageScrollBar';
 import { CircularPageScrollIndicator } from './components/circular-page-scroll-indicator/CircularPageScrollIndicator';
+import MaskedInput from './components/masked-input/MaskedInput';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -18,6 +19,11 @@ function App() {
   const handleOnClose = () => {
     setOpen(!open);
   };
+
+  const handleInput = (val) => {
+    console.log("val -- ", val.original, val.masked);
+  };
+
   console.log("p=open -- ", open);
   return (
     <>
@@ -135,6 +141,8 @@ function App() {
           }}
         />
       )}
+
+      <MaskedInput maskCharacter={"X"} onChange={handleInput} />
     </div>
     </>
   );
