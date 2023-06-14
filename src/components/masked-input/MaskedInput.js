@@ -43,7 +43,7 @@ function MaskedInput({ onChange, maskCharacter = "X" }) {
       <input
         type={"text"}
         onChange={handleInputChange}
-        onKeyDown={handleOnKeyDown}
+        onKeyPress={handleOnKeyDown}
         value={showNumber ? inputRef.current : maskedText}
         maxLength={9}
       />
