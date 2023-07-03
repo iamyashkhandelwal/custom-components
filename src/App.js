@@ -6,6 +6,7 @@ import Pagination from './components/Pagination';
 import { LinearPageScrollBar } from './components/linear-page-scroll-bar/LinearPageScrollBar';
 import { CircularPageScrollIndicator } from './components/circular-page-scroll-indicator/CircularPageScrollIndicator';
 import MaskedInput from './components/masked-input/MaskedInput';
+import DualRangeSlider from './components/dual-range-slider/DualRangeSlider';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -32,6 +33,15 @@ function App() {
     <div className="App" style={{ minHeight: '150vh' }}>
       <h1>Custom Components</h1>
       <h2>Start editing to see some magic happen!</h2>
+      <DualRangeSlider 
+        min={500} // Mandatory
+        max={4000}  // Mandatory
+        minLabel='Min Mon Payment' // Optional
+        maxLabel='Max Mon Payment'   // Optional
+        onChange={({min, max, minError, maxError}) => console.log(min, max, minError, maxError)}  // Optional
+        minInvalidMessage='Min cannot be > max'  // Optional
+        maxInvalidMessage='Max cannot be < min'  // Optional
+      />
       {/* <div className='toastButtons'>
         <div>
           <button
