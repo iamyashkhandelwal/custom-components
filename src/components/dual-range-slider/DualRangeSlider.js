@@ -123,15 +123,16 @@ const DualRangeSlider = ({ min = 0, max = 100, minLabel = "Min", maxLabel = "Max
   }
 
   useEffect(() => {
+    setMinValue(min);
+    setMaxValue(max);
+  }, [min, max])
+
+  useEffect(() => {
     const fromSlider = fromSliderRef.current;
     const toSlider = toSliderRef.current;
     fillSlider(fromSlider, toSlider, '#C6C6C6', '#378bcb', toSlider);
     setToggleAccessible(toSlider);
-
-    setMinValue(min);
-    setMaxValue(max);
-
-  }, [min, max])
+  }, [minValue, maxValue])
 
 
   return (
